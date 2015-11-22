@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yum on zyang&#39;s site</title>
+    <link>https://amzyang.github.io/tags/yum.html</link>
+    <description>Recent content in Yum on zyang&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 13 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amzyang.github.io/tags/yum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>YUM Tips</title>
+      <link>https://amzyang.github.io/blog/yum-tips.html</link>
+      <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/yum-tips.html</guid>
+      <description>yum 很多操作需要 yum-utils 包，我们使用下面的命令安装好这一依赖：
+yum -y install yum-utils  列出给定包中所包含的文件  repoquery -lq your_package_name_here How to list the contents of a package using YUM?
+ 下载 srpm (source rpm package)  yumdownloader --source your_package_name_here</description>
+    </item>
+    
+  </channel>
+</rss>

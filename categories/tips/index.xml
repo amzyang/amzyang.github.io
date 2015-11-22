@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on zyang&#39;s site</title>
+    <link>https://amzyang.github.io/categories/tips.html</link>
+    <description>Recent content in Tips on zyang&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amzyang.github.io/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fedora Tips</title>
+      <link>https://amzyang.github.io/blog/fedora-tips.html</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/fedora-tips.html</guid>
+      <description>Change plymouth boot theme.  plymouth-set-default-theme your_theme_name_here /usr/libexec/plymouth/plymouth-update-initrd  Fix grub2 theme.  # /dev/sda grub2-install /dev/sda  Change grub2 theme.  sed -i.save &amp;#39;/^GRUB_THEME/d&amp;#39; /etc/default/grub echo &amp;#39;GRUB_THEME=&amp;#34;/boot/grub2/themes/system/theme.txt&amp;#34;&amp;#39; &amp;gt;&amp;gt; /etc/default/grub echo &amp;#39;GRUB_TERMINAL_OUTPUT=&amp;#34;gfxterm&amp;#34;&amp;#39; &amp;gt;&amp;gt; /etc/default/grub grub2-mkconfig -o /boot/grub2/grub.cfg  fix beep  http://forums.gentoo.org/viewtopic-t-738176-start-0.html
+echo &amp;#39; modprobe pcspkr chmod u+s /usr/bin/beep &amp;#39; &amp;gt;&amp;gt; /etc/rc.local chmod a+x /etc/rc.local  Move &amp;ldquo;close&amp;rdquo; button to the left  gsettings set org.gnome.shell.overrides button-layout &amp;#34;close&amp;#34;  SSD Tips  https://wiki.</description>
+    </item>
+    
+    <item>
+      <title>YUM Tips</title>
+      <link>https://amzyang.github.io/blog/yum-tips.html</link>
+      <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/yum-tips.html</guid>
+      <description>yum 很多操作需要 yum-utils 包，我们使用下面的命令安装好这一依赖：
+yum -y install yum-utils  列出给定包中所包含的文件  repoquery -lq your_package_name_here How to list the contents of a package using YUM?
+ 下载 srpm (source rpm package)  yumdownloader --source your_package_name_here</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-size: 120%;
+                line-height:32px;
+                padding: 2em;
+            }
+            ul li {
+                list-style-type: decimal-leading-zero;
+            }
+        </style>
+        <title>word list - for zhangyin</title>
+    </head>
+    <body>
+        <ul id="container">
+        </ul>
+        <script type="text/javascript">
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+var cname = 'dictHcDirect';
+if (!getCookie(cname))
+    setCookie(cname, 'true', 100);
+var words = [
+    "admin",
+    "anonymous",
+    "application",
+    "base",
+    "catch",
+    "class",
+    "component",
+    "content",
+    "controller",
+    "directory",
+    "dispatch",
+    "echo",
+    "exception",
+    "feature",
+    "file",
+    "folder",
+    "framework",
+    "function",
+    "handle",
+    "header",
+    "hyperlink",
+    "include",
+    "intialize",
+    "model",
+    "mvc",
+    "register",
+    "request",
+    "require",
+    "response",
+    "set",
+    "setup",
+    "tag",
+    "transparent",
+    "tutorial",
+    "uri",
+    "view",
+    "client",
+    "configuration",
+    "page",
+    "upload",
+    "link",
+    "contact",
+    "thumb",
+    "file",
+    "edit",
+    "view",
+    "history",
+    "bookmark",
+    "tool",
+    "offline",
+    "preview",
+    "tab",
+    "private",
+    "undo",
+    "redo",
+    "preference",
+    "character",
+    "encoding",
+    "sync",
+    "standard",
+    "submit",
+    "feedback",
+    "report",
+    "shortcut",
+    "add-on",
+    "trash",
+    "secure",
+    "service",
+    "apply",
+    "tab",
+    "location",
+    "desktop",
+    "document",
+    "drive",
+    "tag",
+    "smart",
+    "burn",
+    "tab",
+    "table",
+    "info",
+    "compress",
+    "duplicate",
+    "alias",
+    "original",
+    "eject",
+    "disc",
+    "item",
+    "clipboard",
+    "special",
+    "icon",
+    "column",
+    "cover",
+    "flow",
+    "sort",
+    "grid",
+    "minimize",
+    "zoom",
+    "cycle",
+    "arrange",
+    "toggle",
+    "sign in",
+    "sign out",
+    "sign up",
+    "calendar",
+    "diary",
+    "journal",
+    "schedule",
+    "junk",
+    "attachment",
+    "activity",
+];
+var li_html="";
+var length = words.length;
+for (var i = 0; i < length; i++) {
+    var word = words[i];
+    li_html += "<li><a href='http://cn.bing.com/dict/search?q="+word+"'>"+word+"</a></li>";
+}
+var container = document.getElementById('container');
+container.innerHTML = li_html;
+</script>
+        <!-- <script language="javascript" type="text/javascript" src="http://dict.cn/hc/"></script> -->
+    </body>
+</html>

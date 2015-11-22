@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on zyang&#39;s site</title>
+    <link>https://amzyang.github.io/tags/vim.html</link>
+    <description>Recent content in Vim on zyang&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 02 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amzyang.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>buftabs - 将 firefox 标签栏放到 pentadactyl 状态栏</title>
+      <link>https://amzyang.github.io/blog/pentadactyl-buftabs.html</link>
+      <pubDate>Sun, 02 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/pentadactyl-buftabs.html</guid>
+      <description>自定义选项     buftabs true 是否启用 buftabs  buftabs-elem  &#39;nthbi&#39;
+ 显示的标签页元素  buftabs-rnu true 相对标签计数  buftabs-progress true 是否显示正在加载网页时状态栏右侧进度条    buftabs-elem 各选项含义：
+         n 标签计数，见 :help &#39;guioptions&#39; 中的 Tab number   t 网页标题   h 标示页面前进后退是否可用   b 标示是否已在书签中   i 网页图标 favicon    buftabs-rnu 说明：
+当为 true 时，显示 Tab number ，为 false 时，显示 Buffer number</description>
+    </item>
+    
+  </channel>
+</rss>

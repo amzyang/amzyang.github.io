@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on zyang&#39;s site</title>
+    <link>https://amzyang.github.io/tags.html</link>
+    <description>Recent content in Tags on zyang&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amzyang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fedora</title>
+      <link>https://amzyang.github.io/tags/fedora.html</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/tags/fedora.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pentadactyl</title>
+      <link>https://amzyang.github.io/tags/pentadactyl.html</link>
+      <pubDate>Sun, 09 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/tags/pentadactyl.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://amzyang.github.io/tags/vim.html</link>
+      <pubDate>Sun, 02 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/tags/vim.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yum</title>
+      <link>https://amzyang.github.io/tags/yum.html</link>
+      <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/tags/yum.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

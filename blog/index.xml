@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on zyang&#39;s site</title>
+    <link>https://amzyang.github.io/blog.html</link>
+    <description>Recent content in Blogs on zyang&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amzyang.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sicp</title>
+      <link>https://amzyang.github.io/blog/sicp.html</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/sicp.html</guid>
+      <description> 自动补全
+/Applications/Racket v6.11/share/pkgs/shell-completion/racket-completion.zsh
+SICP Racket 自带，也可以通过 raco pkg install sicp 来安装
+DrRacket #lang sicp (#%require sicp-pict) REPL (require sicp) (require sicp-pict) DrRacket VIM 编辑模式 raco pkg install drracket-vim-tool, 然后在 Edit 菜单中启用 Vim Mode
+REPL GPL READLINE raco pkg install readline-gpl
+RACKET repl 配置 </description>
+    </item>
+    
+    <item>
+      <title>Fedora Tips</title>
+      <link>https://amzyang.github.io/blog/fedora-tips.html</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/fedora-tips.html</guid>
+      <description>Change plymouth boot theme.  plymouth-set-default-theme your_theme_name_here /usr/libexec/plymouth/plymouth-update-initrd  Fix grub2 theme.  # /dev/sda grub2-install /dev/sda  Change grub2 theme.  sed -i.save &amp;#39;/^GRUB_THEME/d&amp;#39; /etc/default/grub echo &amp;#39;GRUB_THEME=&amp;#34;/boot/grub2/themes/system/theme.txt&amp;#34;&amp;#39; &amp;gt;&amp;gt; /etc/default/grub echo &amp;#39;GRUB_TERMINAL_OUTPUT=&amp;#34;gfxterm&amp;#34;&amp;#39; &amp;gt;&amp;gt; /etc/default/grub grub2-mkconfig -o /boot/grub2/grub.cfg  fix beep  http://forums.gentoo.org/viewtopic-t-738176-start-0.html
+echo &amp;#39; modprobe pcspkr chmod u+s /usr/bin/beep &amp;#39; &amp;gt;&amp;gt; /etc/rc.local chmod a+x /etc/rc.local  Move &amp;ldquo;close&amp;rdquo; button to the left  gsettings set org.gnome.shell.overrides button-layout &amp;#34;close&amp;#34;  SSD Tips  https://wiki.</description>
+    </item>
+    
+    <item>
+      <title>YUM Tips</title>
+      <link>https://amzyang.github.io/blog/yum-tips.html</link>
+      <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/yum-tips.html</guid>
+      <description>yum 很多操作需要 yum-utils 包，我们使用下面的命令安装好这一依赖：
+yum -y install yum-utils  列出给定包中所包含的文件  repoquery -lq your_package_name_here How to list the contents of a package using YUM?
+ 下载 srpm (source rpm package)  yumdownloader --source your_package_name_here</description>
+    </item>
+    
+    <item>
+      <title>pentadactyl 使用心得</title>
+      <link>https://amzyang.github.io/blog/pentadactyl.html</link>
+      <pubDate>Sun, 09 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/pentadactyl.html</guid>
+      <description> 自定义选项 &#39;editor&#39;
+默认的设置对多字节支持有问题，无法跳转到正确的列
+set editor=&#39;gvim -f +&amp;lt;line&amp;gt; +&amp;quot;let _column=byteidx(getline(&amp;lt;line&amp;gt;),&amp;lt;column&amp;gt;)==-1?&amp;lt;column&amp;gt;-1:&amp;lt;column&amp;gt;|cal cursor(0,byteidx(getline(&amp;lt;line&amp;gt;),_column))&amp;quot; &amp;lt;file&amp;gt;&#39;  &#39;nextpattern&#39; &#39;previouspattern&#39;
+增强的中文上下翻页设置
+set previouspattern=^\s*[上前][一]?[页张个篇章节步封]\s*$,^\s*(较新的文章)\s*$,^&amp;lt;&amp;lt;&amp;lt;$,^([nN]ewer|[pP]rev|[pP]revious)$,^&amp;lt;$,^(&amp;lt;&amp;lt;|«|‹‹)$,^(&amp;lt;|«),(&amp;lt;|«)$ set nextpattern=^\s*[下后][一]?[页张个篇章节步封]\s*$,^\s*(较旧的文章)\s*$,^&amp;gt;&amp;gt;&amp;gt;$,^([oO]lder|[nN]ext)$,^&amp;gt;$,^(&amp;gt;&amp;gt;|››|»)$,^(&amp;gt;|»),(&amp;gt;|»)$,\bmore\b  </description>
+    </item>
+    
+    <item>
+      <title>buftabs - 将 firefox 标签栏放到 pentadactyl 状态栏</title>
+      <link>https://amzyang.github.io/blog/pentadactyl-buftabs.html</link>
+      <pubDate>Sun, 02 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/pentadactyl-buftabs.html</guid>
+      <description>自定义选项     buftabs true 是否启用 buftabs  buftabs-elem  &#39;nthbi&#39;
+ 显示的标签页元素  buftabs-rnu true 相对标签计数  buftabs-progress true 是否显示正在加载网页时状态栏右侧进度条    buftabs-elem 各选项含义：
+         n 标签计数，见 :help &#39;guioptions&#39; 中的 Tab number   t 网页标题   h 标示页面前进后退是否可用   b 标示是否已在书签中   i 网页图标 favicon    buftabs-rnu 说明：
+当为 true 时，显示 Tab number ，为 false 时，显示 Buffer number</description>
+    </item>
+    
+  </channel>
+</rss>

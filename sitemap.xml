@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://amzyang.github.io/blog/sicp.html</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/blog/fedora-tips.html</loc>
+    <lastmod>2012-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/blog/yum-tips.html</loc>
+    <lastmod>2012-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/blog/pentadactyl.html</loc>
+    <lastmod>2012-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/blog/pentadactyl-buftabs.html</loc>
+    <lastmod>2012-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/categories/20.html</loc>
+    <lastmod>2012-12-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/blog.html</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/categories.html</loc>
+    <lastmod>2012-12-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/tags/fedora.html</loc>
+    <lastmod>2012-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/tags/pentadactyl.html</loc>
+    <lastmod>2012-12-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/tags.html</loc>
+    <lastmod>2012-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/categories/tips.html</loc>
+    <lastmod>2012-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/tags/vim.html</loc>
+    <lastmod>2012-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/tags/yum.html</loc>
+    <lastmod>2012-12-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
