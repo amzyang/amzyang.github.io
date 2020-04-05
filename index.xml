@@ -6,10 +6,21 @@
     <description>Recent content on zyang&#39;s site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://amzyang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JSHELL</title>
+      <link>https://amzyang.github.io/jshell.html</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/jshell.html</guid>
+      <description>JSHELL Intellij Support.   https://thoughtfulsoftware.wordpress.com/2018/01/13/jshell-with-intellij/
+  https://stackoverflow.com/questions/48143960/how-to-import-a-custom-class-in-intellij-jshell-console
+  </description>
+    </item>
     
     <item>
       <title>sicp</title>
@@ -84,17 +95,6 @@ BufTabs { color: inherit; margin:0 !important; padding:0 !important; overflow:hi
       
       <guid>https://amzyang.github.io/blog/weekly-05.html</guid>
       <description>package main import ( &amp;#34;flag&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/http/httputil&amp;#34; &amp;#34;net/url&amp;#34; ) type handle struct { reverseProxy string } func (this *handle) ServeHTTP(w http.ResponseWriter, r *http.Request) { remote, err := url.Parse(this.reverseProxy) if err != nil { log.Fatalln(err) } proxy := httputil.NewSingleHostReverseProxy(remote) r.Host = remote.Host proxy.ServeHTTP(w, r) log.Println(r.RemoteAddr + &amp;#34; &amp;#34; + r.Method + &amp;#34; &amp;#34; + r.URL.String() + &amp;#34; &amp;#34; + r.Proto + &amp;#34; &amp;#34; + r.UserAgent()) } func main() { bind := flag.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://amzyang.github.io/jshell.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://amzyang.github.io/jshell.html</guid>
-      <description>JSHELL Intellij Support.   https://thoughtfulsoftware.wordpress.com/2018/01/13/jshell-with-intellij/
-  https://stackoverflow.com/questions/48143960/how-to-import-a-custom-class-in-intellij-jshell-console
-  </description>
     </item>
     
     <item>

@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://amzyang.github.io/jshell.html</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amzyang.github.io/</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://amzyang.github.io/blog.html</loc>
     <lastmod>2017-11-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://amzyang.github.io/blog/sicp.html</loc>
-    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amzyang.github.io/</loc>
     <lastmod>2017-11-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -79,11 +84,6 @@
   
   <url>
     <loc>https://amzyang.github.io/blog/weekly-05.html</loc>
-  </url>
-  
-  <url>
-    <loc>https://amzyang.github.io/jshell.html</loc>
-    <priority>0</priority>
   </url>
   
   <url>
