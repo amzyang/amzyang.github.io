@@ -2,16 +2,13 @@
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     
 
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_128x128.png" sizes="128x128">
+    
 
     <title>
       
@@ -96,7 +93,6 @@
 
   pre code {
     display: inline;
-    max-width: auto;
     padding: 0;
     margin: 0;
     overflow: visible;
@@ -193,7 +189,7 @@
     margin-top:28px;
   }
 
-  #sub-header, time {
+  #sub-header, .date {
     color:#403c3b;
     font-size:13px;
   }
@@ -251,7 +247,7 @@
     margin-top:15px;
   }
 
-  #content time {
+  #content .date {
     margin-left:3px;
   }
 
@@ -380,11 +376,32 @@
       font-size:12px;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    *, #nav h1 a {
+      color: #FDFDFD;
+    }
+
+    body {
+      background: #121212;
+    }
+
+    pre, code {
+      background-color: #262626;
+    }
+
+    #sub-header, .date {
+      color: #BABABA;
+    }
+
+    hr {
+      background: #EBEBEB;
+    }
+  }
 </style>
 
 
-    
-  </head>
+    </head>
 
   <body>
     <section id=nav>
@@ -404,27 +421,21 @@
 <section id=content>
   <h1> pentadactyl 使用心得 </h1>
 
-  <div id=sub-header>
-    December 2012 · 1 minute read
-  </div>
+  
+    <div id=sub-header>
+      December 2012 · 1 minute read
+    </div>
+  
 
   <div class="entry-content">
-    
-
-<h2 id="自定义选项">自定义选项</h2>
-
+    <h2 id="自定义选项">自定义选项</h2>
 <p><code>'editor'</code></p>
-
-<p class="badge badge-warning">默认的设置对多字节支持有问题，无法跳转到正确的列</p>
-
+<!-- raw HTML omitted -->
 <pre><code>set editor='gvim -f +&lt;line&gt; +&quot;let _column=byteidx(getline(&lt;line&gt;),&lt;column&gt;)==-1?&lt;column&gt;-1:&lt;column&gt;|cal cursor(0,byteidx(getline(&lt;line&gt;),_column))&quot; &lt;file&gt;'
 </code></pre>
-
 <p><code>'nextpattern'</code>
-    <code>'previouspattern'</code></p>
-
-<p class="badge badge-info">增强的中文上下翻页设置</p>
-
+<code>'previouspattern'</code></p>
+<!-- raw HTML omitted -->
 <pre><code>set previouspattern=^\s*[上前][一]?[页张个篇章节步封]\s*$,^\s*(较新的文章)\s*$,^&lt;&lt;&lt;$,^([nN]ewer|[pP]rev|[pP]revious)$,^&lt;$,^(&lt;&lt;|«|‹‹)$,^(&lt;|«),(&lt;|«)$
 set nextpattern=^\s*[下后][一]?[页张个篇章节步封]\s*$,^\s*(较旧的文章)\s*$,^&gt;&gt;&gt;$,^([oO]lder|[nN]ext)$,^&gt;$,^(&gt;&gt;|››|»)$,^(&gt;|»),(&gt;|»)$,\bmore\b
 </code></pre>

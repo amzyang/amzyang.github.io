@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
-	<meta name="generator" content="Hugo 0.32.4" />
+	<meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     
 
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_128x128.png" sizes="128x128">
+    
 
     <title>
       
@@ -97,7 +94,6 @@
 
   pre code {
     display: inline;
-    max-width: auto;
     padding: 0;
     margin: 0;
     overflow: visible;
@@ -194,7 +190,7 @@
     margin-top:28px;
   }
 
-  #sub-header, time {
+  #sub-header, .date {
     color:#403c3b;
     font-size:13px;
   }
@@ -252,7 +248,7 @@
     margin-top:15px;
   }
 
-  #content time {
+  #content .date {
     margin-left:3px;
   }
 
@@ -381,13 +377,33 @@
       font-size:12px;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    *, #nav h1 a {
+      color: #FDFDFD;
+    }
+
+    body {
+      background: #121212;
+    }
+
+    pre, code {
+      background-color: #262626;
+    }
+
+    #sub-header, .date {
+      color: #BABABA;
+    }
+
+    hr {
+      background: #EBEBEB;
+    }
+  }
 </style>
 
 
-    
-      <link href="https://amzyang.github.io/index.xml" rel="alternate" type="application/rss+xml" title="zyang&#39;s site" />
-    
-  </head>
+    <link rel="alternate" type="application/rss+xml" href="https://amzyang.github.io/index.xml" title="zyang's site" />
+    </head>
 
   <body>
     <section id=nav>
@@ -409,36 +425,64 @@
     
       <li>
         <h2><a href="https://amzyang.github.io/blog/sicp.html">sicp</a></h2>
-        <div id=date>
-          <time>November 2017</time>
+        <div class=date>
+          November 2017
         </div>
       </li>
     
       <li>
         <h2><a href="https://amzyang.github.io/blog/fedora-tips.html">Fedora Tips</a></h2>
-        <div id=date>
-          <time>December 2012</time>
+        <div class=date>
+          December 2012
         </div>
       </li>
     
       <li>
         <h2><a href="https://amzyang.github.io/blog/yum-tips.html">YUM Tips</a></h2>
-        <div id=date>
-          <time>December 2012</time>
+        <div class=date>
+          December 2012
         </div>
       </li>
     
       <li>
         <h2><a href="https://amzyang.github.io/blog/pentadactyl.html">pentadactyl 使用心得</a></h2>
-        <div id=date>
-          <time>December 2012</time>
+        <div class=date>
+          December 2012
         </div>
       </li>
     
       <li>
         <h2><a href="https://amzyang.github.io/blog/pentadactyl-buftabs.html">buftabs - 将 firefox 标签栏放到 pentadactyl 状态栏</a></h2>
-        <div id=date>
-          <time>December 2012</time>
+        <div class=date>
+          December 2012
+        </div>
+      </li>
+    
+      <li>
+        <h2><a href="https://amzyang.github.io/blog/weekly-05.html"></a></h2>
+        <div class=date>
+          January 0001
+        </div>
+      </li>
+    
+      <li>
+        <h2><a href="https://amzyang.github.io/jshell.html"></a></h2>
+        <div class=date>
+          January 0001
+        </div>
+      </li>
+    
+      <li>
+        <h2><a href="https://amzyang.github.io/spring-debug.html"></a></h2>
+        <div class=date>
+          January 0001
+        </div>
+      </li>
+    
+      <li>
+        <h2><a href="https://amzyang.github.io/spring.html"></a></h2>
+        <div class=date>
+          January 0001
         </div>
       </li>
     

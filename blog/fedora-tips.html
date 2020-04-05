@@ -2,16 +2,13 @@
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     
 
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_128x128.png" sizes="128x128">
+    
 
     <title>
       
@@ -96,7 +93,6 @@
 
   pre code {
     display: inline;
-    max-width: auto;
     padding: 0;
     margin: 0;
     overflow: visible;
@@ -193,7 +189,7 @@
     margin-top:28px;
   }
 
-  #sub-header, time {
+  #sub-header, .date {
     color:#403c3b;
     font-size:13px;
   }
@@ -251,7 +247,7 @@
     margin-top:15px;
   }
 
-  #content time {
+  #content .date {
     margin-left:3px;
   }
 
@@ -380,11 +376,32 @@
       font-size:12px;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    *, #nav h1 a {
+      color: #FDFDFD;
+    }
+
+    body {
+      background: #121212;
+    }
+
+    pre, code {
+      background-color: #262626;
+    }
+
+    #sub-header, .date {
+      color: #BABABA;
+    }
+
+    hr {
+      background: #EBEBEB;
+    }
+  }
 </style>
 
 
-    
-  </head>
+    </head>
 
   <body>
     <section id=nav>
@@ -404,61 +421,57 @@
 <section id=content>
   <h1> Fedora Tips </h1>
 
-  <div id=sub-header>
-    December 2012 · 1 minute read
-  </div>
+  
+    <div id=sub-header>
+      December 2012 · 1 minute read
+    </div>
+  
 
   <div class="entry-content">
     <ul>
 <li>Change plymouth boot theme.</li>
 </ul>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">plymouth-set-default-theme your_theme_name_here
-/usr/libexec/plymouth/plymouth-update-initrd</code></pre></div>
-<ul>
+/usr/libexec/plymouth/plymouth-update-initrd
+</code></pre></div><ul>
 <li>Fix grub2 theme.</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="font-style:italic"># /dev/sda
-</span><span style="font-style:italic"></span>grub2-install /dev/sda</code></pre></div>
-<ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="font-style:italic"># /dev/sda</span>
+grub2-install /dev/sda
+</code></pre></div><ul>
 <li>Change grub2 theme.</li>
 </ul>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sed -i.save <span style="font-style:italic">&#39;/^GRUB_THEME/d&#39;</span> /etc/default/grub
 echo <span style="font-style:italic">&#39;GRUB_THEME=&#34;/boot/grub2/themes/system/theme.txt&#34;&#39;</span> &gt;&gt; /etc/default/grub
 echo <span style="font-style:italic">&#39;GRUB_TERMINAL_OUTPUT=&#34;gfxterm&#34;&#39;</span> &gt;&gt; /etc/default/grub
-grub2-mkconfig  -o /boot/grub2/grub.cfg</code></pre></div>
-<ul>
+grub2-mkconfig  -o /boot/grub2/grub.cfg
+</code></pre></div><ul>
 <li>fix beep</li>
 </ul>
-
 <p><a href="http://forums.gentoo.org/viewtopic-t-738176-start-0.html">http://forums.gentoo.org/viewtopic-t-738176-start-0.html</a></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">echo <span style="font-style:italic">&#39;
 </span><span style="font-style:italic">modprobe pcspkr
 </span><span style="font-style:italic">chmod u+s /usr/bin/beep
 </span><span style="font-style:italic">&#39;</span> &gt;&gt; /etc/rc.local
-chmod a+x /etc/rc.local</code></pre></div>
-<ul>
+chmod a+x /etc/rc.local
+</code></pre></div><ul>
 <li>Move &ldquo;close&rdquo; button to the left</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">gsettings set org.gnome.shell.overrides button-layout <span style="font-style:italic">&#34;close&#34;</span></code></pre></div>
-<ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">gsettings set org.gnome.shell.overrides button-layout <span style="font-style:italic">&#34;close&#34;</span>
+</code></pre></div><ul>
 <li>SSD
 Tips</li>
 </ul>
-
 <p><a href="https://wiki.archlinux.org/index.php/Solid_State_Drives#Choice_of_Filesystem">https://wiki.archlinux.org/index.php/Solid_State_Drives#Choice_of_Filesystem</a></p>
-
 <ul>
 <li>Enable TRIM by Mount Flags:</li>
 </ul>
-
 <p>/dev/sda1  /       ext4   defaults,noatime,discard   0  1
 /dev/sda2  /home   ext4   defaults,noatime,discard   0  2</p>
-
 <ul>
 <li>Enable
 rc.local</li>
 </ul>
-
 <p>ln -s /usr/lib/systemd/system/rc-local.service /etc/systemd/system/multi-user.target.wants/rc-local.service</p>
 
   </div>

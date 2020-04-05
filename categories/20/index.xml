@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>20 on zyang&#39;s site</title>
+    <title>20% on zyang&#39;s site</title>
     <link>https://amzyang.github.io/categories/20.html</link>
-    <description>Recent content in 20 on zyang&#39;s site</description>
+    <description>Recent content in 20% on zyang&#39;s site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 09 Dec 2012 00:00:00 +0000</lastBuildDate>
@@ -17,10 +17,8 @@
       <pubDate>Sun, 09 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://amzyang.github.io/blog/pentadactyl.html</guid>
-      <description> 自定义选项 &#39;editor&#39;
-默认的设置对多字节支持有问题，无法跳转到正确的列
+      <description>自定义选项 &#39;editor&#39;
 set editor=&#39;gvim -f +&amp;lt;line&amp;gt; +&amp;quot;let _column=byteidx(getline(&amp;lt;line&amp;gt;),&amp;lt;column&amp;gt;)==-1?&amp;lt;column&amp;gt;-1:&amp;lt;column&amp;gt;|cal cursor(0,byteidx(getline(&amp;lt;line&amp;gt;),_column))&amp;quot; &amp;lt;file&amp;gt;&#39;  &#39;nextpattern&#39; &#39;previouspattern&#39;
-增强的中文上下翻页设置
 set previouspattern=^\s*[上前][一]?[页张个篇章节步封]\s*$,^\s*(较新的文章)\s*$,^&amp;lt;&amp;lt;&amp;lt;$,^([nN]ewer|[pP]rev|[pP]revious)$,^&amp;lt;$,^(&amp;lt;&amp;lt;|«|‹‹)$,^(&amp;lt;|«),(&amp;lt;|«)$ set nextpattern=^\s*[下后][一]?[页张个篇章节步封]\s*$,^\s*(较旧的文章)\s*$,^&amp;gt;&amp;gt;&amp;gt;$,^([oO]lder|[nN]ext)$,^&amp;gt;$,^(&amp;gt;&amp;gt;|››|»)$,^(&amp;gt;|»),(&amp;gt;|»)$,\bmore\b  </description>
     </item>
     
@@ -30,10 +28,13 @@ set previouspattern=^\s*[上前][一]?[页张个篇章节步封]\s*$,^\s*(较新
       <pubDate>Sun, 02 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://amzyang.github.io/blog/pentadactyl-buftabs.html</guid>
-      <description>自定义选项     buftabs true 是否启用 buftabs  buftabs-elem  &#39;nthbi&#39;
- 显示的标签页元素  buftabs-rnu true 相对标签计数  buftabs-progress true 是否显示正在加载网页时状态栏右侧进度条    buftabs-elem 各选项含义：
+      <description>自定义选项 buftabs-elem 各选项含义：
          n 标签计数，见 :help &#39;guioptions&#39; 中的 Tab number   t 网页标题   h 标示页面前进后退是否可用   b 标示是否已在书签中   i 网页图标 favicon    buftabs-rnu 说明：
-当为 true 时，显示 Tab number ，为 false 时，显示 Buffer number</description>
+当为 true 时，显示 Tab number ，为 false 时，显示 Buffer number
+自定义命令 buf[tabs] bt
+启/禁用 buftabs
+自定义样式 默认样式如下：
+BufTabs { color: inherit; margin:0 !important; padding:0 !important; overflow:hidden; } BufTabSelected { background-repeat:no-repeat; background-size:contain, contain; background-position: 2px top; background-color:#fff; color:#000; margin:0 !</description>
     </item>
     
   </channel>

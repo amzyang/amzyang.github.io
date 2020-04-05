@@ -13,10 +13,10 @@
     <title>
       
       
-         404 Page not found 
+          
       
     </title>
-    <link rel="canonical" href="https://amzyang.github.io/404.html">
+    <link rel="canonical" href="https://amzyang.github.io/blog/weekly-05.html">
 
     <style>
   * {
@@ -417,10 +417,63 @@
       </ul>
     </section>
 
-  <section id=not-found>
-    <a href=https://amzyang.github.io/>404</a>
-  </section>
+
+<section id=content>
+  <h1>  </h1>
+
+  
+
+  <div class="entry-content">
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-weight:bold">package</span> main
+
+<span style="font-weight:bold">import</span> (
+	<span style="font-style:italic">&#34;flag&#34;</span>
+	<span style="font-style:italic">&#34;log&#34;</span>
+	<span style="font-style:italic">&#34;net/http&#34;</span>
+	<span style="font-style:italic">&#34;net/http/httputil&#34;</span>
+	<span style="font-style:italic">&#34;net/url&#34;</span>
+)
+
+<span style="font-weight:bold">type</span> handle <span style="font-weight:bold">struct</span> {
+	reverseProxy <span style="">string</span>
+}
+
+<span style="font-weight:bold">func</span> (this *handle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	remote, err := url.Parse(this.reverseProxy)
+	<span style="font-weight:bold">if</span> err != <span style="font-weight:bold">nil</span> {
+		log.Fatalln(err)
+	}
+	proxy := httputil.NewSingleHostReverseProxy(remote)
+	r.Host = remote.Host
+	proxy.ServeHTTP(w, r)
+	log.Println(r.RemoteAddr + <span style="font-style:italic">&#34; &#34;</span> + r.Method + <span style="font-style:italic">&#34; &#34;</span> + r.URL.String() + <span style="font-style:italic">&#34; &#34;</span> + r.Proto + <span style="font-style:italic">&#34; &#34;</span> + r.UserAgent())
+}
+
+<span style="font-weight:bold">func</span> main() {
+	bind := flag.String(<span style="font-style:italic">&#34;l&#34;</span>, <span style="font-style:italic">&#34;0.0.0.0:8888&#34;</span>, <span style="font-style:italic">&#34;listen on ip:port&#34;</span>)
+	remote := flag.String(<span style="font-style:italic">&#34;r&#34;</span>, <span style="font-style:italic">&#34;http://idea.imsxm.com:80&#34;</span>, <span style="font-style:italic">&#34;reverse proxy addr&#34;</span>)
+	flag.Parse()
+	log.Printf(<span style="font-style:italic">&#34;Listening on %s, forwarding to %s&#34;</span>, *bind, *remote)
+	h := &amp;handle{reverseProxy: *remote}
+	err := http.ListenAndServe(*bind, h)
+	<span style="font-weight:bold">if</span> err != <span style="font-weight:bold">nil</span> {
+		log.Fatalln(<span style="font-style:italic">&#34;ListenAndServe: &#34;</span>, err)
+	}
+}
+</code></pre></div>
+  </div>
+
+  <div id=links>
+    
+    
+      <a class="basic-alignment left" href="https://amzyang.github.io/blog/pentadactyl-buftabs.html">buftabs - 将 firefox 标签栏放到 pentadactyl 状态栏 &raquo;</a>
+    
+  </div>
+</section>
+
   
 </body>
 </html>
+
+
 

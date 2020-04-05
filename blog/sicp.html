@@ -2,16 +2,13 @@
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     
 
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_128x128.png" sizes="128x128">
+    
 
     <title>
       
@@ -96,7 +93,6 @@
 
   pre code {
     display: inline;
-    max-width: auto;
     padding: 0;
     margin: 0;
     overflow: visible;
@@ -193,7 +189,7 @@
     margin-top:28px;
   }
 
-  #sub-header, time {
+  #sub-header, .date {
     color:#403c3b;
     font-size:13px;
   }
@@ -251,7 +247,7 @@
     margin-top:15px;
   }
 
-  #content time {
+  #content .date {
     margin-left:3px;
   }
 
@@ -380,11 +376,32 @@
       font-size:12px;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    *, #nav h1 a {
+      color: #FDFDFD;
+    }
+
+    body {
+      background: #121212;
+    }
+
+    pre, code {
+      background-color: #262626;
+    }
+
+    #sub-header, .date {
+      color: #BABABA;
+    }
+
+    hr {
+      background: #EBEBEB;
+    }
+  }
 </style>
 
 
-    
-  </head>
+    </head>
 
   <body>
     <section id=nav>
@@ -404,35 +421,30 @@
 <section id=content>
   <h1> sicp </h1>
 
-  <div id=sub-header>
-    November 2017 · 1 minute read
-  </div>
+  
+    <div id=sub-header>
+      November 2017 · 1 minute read
+    </div>
+  
 
   <div class="entry-content">
-    
-
+    <p><a href="https://xuanji.appspot.com/isicp/">https://xuanji.appspot.com/isicp/</a></p>
+<p><a href="http://sarabander.github.io/sicp/">http://sarabander.github.io/sicp/</a></p>
+<p><a href="https://news.ycombinator.com/item?id=13918465">https://news.ycombinator.com/item?id=13918465</a></p>
 <p>自动补全</p>
-
 <p><code>/Applications/Racket v6.11/share/pkgs/shell-completion/racket-completion.zsh</code></p>
-
 <h1 id="sicp">SICP</h1>
-
 <p>Racket 自带，也可以通过 <code>raco pkg install sicp</code> 来安装</p>
-
 <h2 id="drracket">DrRacket</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="font-weight:bold">#lang </span><span style="font-weight:bold">sicp</span>
-(<span style="font-weight:bold">#%require</span> sicp-pict)</code></pre></div>
-<h2 id="repl">REPL</h2>
+(<span style="font-weight:bold">#%require</span> sicp-pict)<span style="">
+</span></code></pre></div><h2 id="repl">REPL</h2>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket">(<span style="font-weight:bold">require</span> sicp)
-(<span style="font-weight:bold">require</span> sicp-pict)</code></pre></div>
-<h1 id="drracket-vim-编辑模式">DrRacket VIM 编辑模式</h1>
-
+(<span style="font-weight:bold">require</span> sicp-pict)<span style="">
+</span></code></pre></div><h1 id="drracket-vim-编辑模式">DrRacket VIM 编辑模式</h1>
 <p><code>raco pkg install drracket-vim-tool</code>, 然后在 <code>Edit</code> 菜单中启用 <code>Vim Mode</code></p>
-
 <h1 id="repl-gpl-readline">REPL GPL READLINE</h1>
-
 <p><code>raco pkg install readline-gpl</code></p>
-
 <h1 id="racket-repl-配置">RACKET repl 配置</h1>
 
   </div>

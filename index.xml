@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>zyang&#39;s site</title>
@@ -17,10 +17,13 @@
       <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amzyang.github.io/blog/sicp.html</guid>
-      <description> 自动补全
+      <description>https://xuanji.appspot.com/isicp/
+http://sarabander.github.io/sicp/
+https://news.ycombinator.com/item?id=13918465
+自动补全
 /Applications/Racket v6.11/share/pkgs/shell-completion/racket-completion.zsh
 SICP Racket 自带，也可以通过 raco pkg install sicp 来安装
-DrRacket #lang sicp (#%require sicp-pict) REPL (require sicp) (require sicp-pict) DrRacket VIM 编辑模式 raco pkg install drracket-vim-tool, 然后在 Edit 菜单中启用 Vim Mode
+DrRacket #lang sicp (#%require sicp-pict)REPL (require sicp) (require sicp-pict)DrRacket VIM 编辑模式 raco pkg install drracket-vim-tool, 然后在 Edit 菜单中启用 Vim Mode
 REPL GPL READLINE raco pkg install readline-gpl
 RACKET repl 配置 </description>
     </item>
@@ -42,8 +45,10 @@ echo &amp;#39; modprobe pcspkr chmod u+s /usr/bin/beep &amp;#39; &amp;gt;&amp;gt
       
       <guid>https://amzyang.github.io/blog/yum-tips.html</guid>
       <description>yum 很多操作需要 yum-utils 包，我们使用下面的命令安装好这一依赖：
-yum -y install yum-utils  列出给定包中所包含的文件  repoquery -lq your_package_name_here How to list the contents of a package using YUM?
- 下载 srpm (source rpm package)  yumdownloader --source your_package_name_here</description>
+yum -y install yum-utils   列出给定包中所包含的文件
+repoquery -lq your_package_name_here How to list the contents of a package using YUM?
+  下载 srpm (source rpm package)
+yumdownloader --source your_package_name_here   </description>
     </item>
     
     <item>
@@ -52,10 +57,8 @@ yum -y install yum-utils  列出给定包中所包含的文件  repoquery -lq yo
       <pubDate>Sun, 09 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://amzyang.github.io/blog/pentadactyl.html</guid>
-      <description> 自定义选项 &#39;editor&#39;
-默认的设置对多字节支持有问题，无法跳转到正确的列
+      <description>自定义选项 &#39;editor&#39;
 set editor=&#39;gvim -f +&amp;lt;line&amp;gt; +&amp;quot;let _column=byteidx(getline(&amp;lt;line&amp;gt;),&amp;lt;column&amp;gt;)==-1?&amp;lt;column&amp;gt;-1:&amp;lt;column&amp;gt;|cal cursor(0,byteidx(getline(&amp;lt;line&amp;gt;),_column))&amp;quot; &amp;lt;file&amp;gt;&#39;  &#39;nextpattern&#39; &#39;previouspattern&#39;
-增强的中文上下翻页设置
 set previouspattern=^\s*[上前][一]?[页张个篇章节步封]\s*$,^\s*(较新的文章)\s*$,^&amp;lt;&amp;lt;&amp;lt;$,^([nN]ewer|[pP]rev|[pP]revious)$,^&amp;lt;$,^(&amp;lt;&amp;lt;|«|‹‹)$,^(&amp;lt;|«),(&amp;lt;|«)$ set nextpattern=^\s*[下后][一]?[页张个篇章节步封]\s*$,^\s*(较旧的文章)\s*$,^&amp;gt;&amp;gt;&amp;gt;$,^([oO]lder|[nN]ext)$,^&amp;gt;$,^(&amp;gt;&amp;gt;|››|»)$,^(&amp;gt;|»),(&amp;gt;|»)$,\bmore\b  </description>
     </item>
     
@@ -65,10 +68,52 @@ set previouspattern=^\s*[上前][一]?[页张个篇章节步封]\s*$,^\s*(较新
       <pubDate>Sun, 02 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://amzyang.github.io/blog/pentadactyl-buftabs.html</guid>
-      <description>自定义选项     buftabs true 是否启用 buftabs  buftabs-elem  &#39;nthbi&#39;
- 显示的标签页元素  buftabs-rnu true 相对标签计数  buftabs-progress true 是否显示正在加载网页时状态栏右侧进度条    buftabs-elem 各选项含义：
+      <description>自定义选项 buftabs-elem 各选项含义：
          n 标签计数，见 :help &#39;guioptions&#39; 中的 Tab number   t 网页标题   h 标示页面前进后退是否可用   b 标示是否已在书签中   i 网页图标 favicon    buftabs-rnu 说明：
-当为 true 时，显示 Tab number ，为 false 时，显示 Buffer number</description>
+当为 true 时，显示 Tab number ，为 false 时，显示 Buffer number
+自定义命令 buf[tabs] bt
+启/禁用 buftabs
+自定义样式 默认样式如下：
+BufTabs { color: inherit; margin:0 !important; padding:0 !important; overflow:hidden; } BufTabSelected { background-repeat:no-repeat; background-size:contain, contain; background-position: 2px top; background-color:#fff; color:#000; margin:0 !</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://amzyang.github.io/blog/weekly-05.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/weekly-05.html</guid>
+      <description>package main import ( &amp;#34;flag&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/http/httputil&amp;#34; &amp;#34;net/url&amp;#34; ) type handle struct { reverseProxy string } func (this *handle) ServeHTTP(w http.ResponseWriter, r *http.Request) { remote, err := url.Parse(this.reverseProxy) if err != nil { log.Fatalln(err) } proxy := httputil.NewSingleHostReverseProxy(remote) r.Host = remote.Host proxy.ServeHTTP(w, r) log.Println(r.RemoteAddr + &amp;#34; &amp;#34; + r.Method + &amp;#34; &amp;#34; + r.URL.String() + &amp;#34; &amp;#34; + r.Proto + &amp;#34; &amp;#34; + r.UserAgent()) } func main() { bind := flag.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://amzyang.github.io/jshell.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/jshell.html</guid>
+      <description>JSHELL Intellij Support.   https://thoughtfulsoftware.wordpress.com/2018/01/13/jshell-with-intellij/
+  https://stackoverflow.com/questions/48143960/how-to-import-a-custom-class-in-intellij-jshell-console
+  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://amzyang.github.io/spring-debug.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/spring-debug.html</guid>
+      <description>java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar target/myproject-0.0.1-SNAPSHOT.jar </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://amzyang.github.io/spring.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/spring.html</guid>
+      <description>thymeleaf IDEA support &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xmlns:th=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt; xmlns:th is needed.
+RUN Click the run gutter icon at left side of main function.</description>
     </item>
     
   </channel>

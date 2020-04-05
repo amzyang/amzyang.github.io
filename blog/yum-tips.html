@@ -2,16 +2,13 @@
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     
 
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://amzyang.github.io/favicon_128x128.png" sizes="128x128">
+    
 
     <title>
       
@@ -96,7 +93,6 @@
 
   pre code {
     display: inline;
-    max-width: auto;
     padding: 0;
     margin: 0;
     overflow: visible;
@@ -193,7 +189,7 @@
     margin-top:28px;
   }
 
-  #sub-header, time {
+  #sub-header, .date {
     color:#403c3b;
     font-size:13px;
   }
@@ -251,7 +247,7 @@
     margin-top:15px;
   }
 
-  #content time {
+  #content .date {
     margin-left:3px;
   }
 
@@ -380,11 +376,32 @@
       font-size:12px;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    *, #nav h1 a {
+      color: #FDFDFD;
+    }
+
+    body {
+      background: #121212;
+    }
+
+    pre, code {
+      background-color: #262626;
+    }
+
+    #sub-header, .date {
+      color: #BABABA;
+    }
+
+    hr {
+      background: #EBEBEB;
+    }
+  }
 </style>
 
 
-    
-  </head>
+    </head>
 
   <body>
     <section id=nav>
@@ -404,24 +421,28 @@
 <section id=content>
   <h1> YUM Tips </h1>
 
-  <div id=sub-header>
-    December 2012 · 1 minute read
-  </div>
+  
+    <div id=sub-header>
+      December 2012 · 1 minute read
+    </div>
+  
 
   <div class="entry-content">
     <p>yum 很多操作需要 <code>yum-utils</code> 包，我们使用下面的命令安装好这一依赖：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">yum -y install yum-utils</code></pre></div>
-<ul>
-<li>列出给定包中所包含的文件</li>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">yum -y install yum-utils
+</code></pre></div><ul>
+<li>
+<p>列出给定包中所包含的文件</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">repoquery -lq your_package_name_here
+</code></pre></div><p><a href="http://stackoverflow.com/questions/104055/how-to-list-the-contents-of-a-package-using-yum">How to list the contents of a package using
+YUM?</a></p>
+</li>
+<li>
+<p>下载 srpm (source rpm package)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">yumdownloader --source your_package_name_here
+</code></pre></div></li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  repoquery -lq your_package_name_here</code></pre></div>
-<p><a href="http://stackoverflow.com/questions/104055/how-to-list-the-contents-of-a-package-using-yum">How to list the contents of a package using
-  YUM?</a></p>
 
-<ul>
-<li>下载 srpm (source rpm package)</li>
-</ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  yumdownloader --source your_package_name_here</code></pre></div>
   </div>
 
   <div id=links>
