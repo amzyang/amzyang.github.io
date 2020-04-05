@@ -431,33 +431,33 @@
     <ul>
 <li>Change plymouth boot theme.</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">plymouth-set-default-theme your_theme_name_here
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">plymouth-set-default-theme your_theme_name_here
 /usr/libexec/plymouth/plymouth-update-initrd
 </code></pre></div><ul>
 <li>Fix grub2 theme.</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="font-style:italic"># /dev/sda</span>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007f7f"># /dev/sda</span>
 grub2-install /dev/sda
 </code></pre></div><ul>
 <li>Change grub2 theme.</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sed -i.save <span style="font-style:italic">&#39;/^GRUB_THEME/d&#39;</span> /etc/default/grub
-echo <span style="font-style:italic">&#39;GRUB_THEME=&#34;/boot/grub2/themes/system/theme.txt&#34;&#39;</span> &gt;&gt; /etc/default/grub
-echo <span style="font-style:italic">&#39;GRUB_TERMINAL_OUTPUT=&#34;gfxterm&#34;&#39;</span> &gt;&gt; /etc/default/grub
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sed -i.save <span style="color:#0ff;font-weight:bold">&#39;/^GRUB_THEME/d&#39;</span> /etc/default/grub
+<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#39;GRUB_THEME=&#34;/boot/grub2/themes/system/theme.txt&#34;&#39;</span> &gt;&gt; /etc/default/grub
+<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#39;GRUB_TERMINAL_OUTPUT=&#34;gfxterm&#34;&#39;</span> &gt;&gt; /etc/default/grub
 grub2-mkconfig  -o /boot/grub2/grub.cfg
 </code></pre></div><ul>
 <li>fix beep</li>
 </ul>
 <p><a href="http://forums.gentoo.org/viewtopic-t-738176-start-0.html">http://forums.gentoo.org/viewtopic-t-738176-start-0.html</a></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">echo <span style="font-style:italic">&#39;
-</span><span style="font-style:italic">modprobe pcspkr
-</span><span style="font-style:italic">chmod u+s /usr/bin/beep
-</span><span style="font-style:italic">&#39;</span> &gt;&gt; /etc/rc.local
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#39;
+</span><span style="color:#0ff;font-weight:bold">modprobe pcspkr
+</span><span style="color:#0ff;font-weight:bold">chmod u+s /usr/bin/beep
+</span><span style="color:#0ff;font-weight:bold">&#39;</span> &gt;&gt; /etc/rc.local
 chmod a+x /etc/rc.local
 </code></pre></div><ul>
 <li>Move &ldquo;close&rdquo; button to the left</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">gsettings set org.gnome.shell.overrides button-layout <span style="font-style:italic">&#34;close&#34;</span>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">gsettings <span style="color:#fff;font-weight:bold">set</span> org.gnome.shell.overrides button-layout <span style="color:#0ff;font-weight:bold">&#34;close&#34;</span>
 </code></pre></div><ul>
 <li>SSD
 Tips</li>
