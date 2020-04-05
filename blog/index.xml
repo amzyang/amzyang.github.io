@@ -6,10 +6,21 @@
     <description>Recent content in Blogs on zyang&#39;s site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://amzyang.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Framework</title>
+      <link>https://amzyang.github.io/blog/spring.html</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://amzyang.github.io/blog/spring.html</guid>
+      <description>thymeleaf IDEA support &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xmlns:th=&amp;quot;http://www.thymeleaf.org&amp;quot;&amp;gt; xmlns:th is needed.
+RUN Click the run gutter icon at left side of main function.
+debug java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar target/myproject-0.0.1-SNAPSHOT.jar </description>
+    </item>
     
     <item>
       <title>sicp</title>
@@ -75,15 +86,6 @@ set previouspattern=^\s*[上前][一]?[页张个篇章节步封]\s*$,^\s*(较新
 启/禁用 buftabs
 自定义样式 默认样式如下：
 BufTabs { color: inherit; margin:0 !important; padding:0 !important; overflow:hidden; } BufTabSelected { background-repeat:no-repeat; background-size:contain, contain; background-position: 2px top; background-color:#fff; color:#000; margin:0 !</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://amzyang.github.io/blog/weekly-05.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://amzyang.github.io/blog/weekly-05.html</guid>
-      <description>package main import ( &amp;#34;flag&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/http/httputil&amp;#34; &amp;#34;net/url&amp;#34; ) type handle struct { reverseProxy string } func (this *handle) ServeHTTP(w http.ResponseWriter, r *http.Request) { remote, err := url.Parse(this.reverseProxy) if err != nil { log.Fatalln(err) } proxy := httputil.NewSingleHostReverseProxy(remote) r.Host = remote.Host proxy.ServeHTTP(w, r) log.Println(r.RemoteAddr + &amp;#34; &amp;#34; + r.Method + &amp;#34; &amp;#34; + r.URL.String() + &amp;#34; &amp;#34; + r.Proto + &amp;#34; &amp;#34; + r.UserAgent()) } func main() { bind := flag.</description>
     </item>
     
   </channel>

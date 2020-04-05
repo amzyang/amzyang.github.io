@@ -18,10 +18,10 @@
     <title>
       
       
-         buftabs - 将 firefox 标签栏放到 pentadactyl 状态栏 
+         Spring Framework 
       
     </title>
-    <link rel="canonical" href="https://amzyang.github.io/blog/pentadactyl-buftabs.html">
+    <link rel="canonical" href="https://amzyang.github.io/blog/spring.html">
 
     <style>
  
@@ -532,143 +532,30 @@
 
 
 <section id=content>
-  <h1> buftabs - 将 firefox 标签栏放到 pentadactyl 状态栏 </h1>
+  <h1> Spring Framework </h1>
 
   
     <div id=sub-header>
-      December 2012 · 1 minute read
+      April 2020 · 1 minute read
     </div>
   
 
   <div class="entry-content">
-    <h2 id="自定义选项">自定义选项</h2>
-<!-- raw HTML omitted -->
-<p><code>buftabs-elem</code> 各选项含义：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>n</code></td>
-<td>标签计数，见 <code>:help 'guioptions'</code> 中的 <code>Tab number</code></td>
-</tr>
-<tr>
-<td><code>t</code></td>
-<td>网页标题</td>
-</tr>
-<tr>
-<td><code>h</code></td>
-<td>标示页面前进后退是否可用</td>
-</tr>
-<tr>
-<td><code>b</code></td>
-<td>标示是否已在书签中</td>
-</tr>
-<tr>
-<td><code>i</code></td>
-<td>网页图标 <code>favicon</code></td>
-</tr>
-</tbody>
-</table>
-<p><code>buftabs-rnu</code> 说明：</p>
-<p>当为 <code>true</code> 时，显示 <code>Tab number</code> ，为 <code>false</code> 时，显示 <code>Buffer number</code></p>
-<h2 id="自定义命令">自定义命令</h2>
-<p><code>buf[tabs]</code> <code>bt</code></p>
-<p>启/禁用 <code>buftabs</code></p>
-<h2 id="自定义样式">自定义样式</h2>
-<p>默认样式如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">BufTabs</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span><span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span><span class="kc">hidden</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">BufTabSelected</span> <span class="p">{</span>
-    <span class="k">background-repeat</span><span class="p">:</span><span class="kc">no-repeat</span><span class="p">;</span>
-    <span class="k">background-size</span><span class="p">:</span><span class="kc">contain</span><span class="p">,</span> <span class="kc">contain</span><span class="p">;</span>
-    <span class="k">background-position</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">top</span><span class="p">;</span>
-    <span class="k">background-color</span><span class="p">:</span><span class="mh">#fff</span><span class="p">;</span>
-    <span class="k">color</span><span class="p">:</span><span class="mh">#000</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">font-weight</span><span class="p">:</span><span class="kc">normal</span><span class="p">;</span>
-    <span class="k">border-bottom-left-radius</span><span class="p">:</span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">border-bottom-right-radius</span><span class="p">:</span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">max-width</span><span class="p">:</span><span class="mi">130</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">BufTabAlternate</span> <span class="p">{</span>
-    <span class="k">background-repeat</span><span class="p">:</span><span class="kc">no-repeat</span><span class="p">;</span>
-    <span class="k">background-size</span><span class="p">:</span><span class="kc">contain</span><span class="p">,</span> <span class="kc">contain</span><span class="p">;</span>
-    <span class="k">background-position</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">top</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">cursor</span><span class="p">:</span><span class="kc">pointer</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">max-width</span><span class="p">:</span><span class="mi">130</span><span class="kt">px</span><span class="p">;</span>
-
-<span class="p">}</span>
-<span class="nt">BufTab</span> <span class="p">{</span>
-   <span class="k">background-repeat</span><span class="p">:</span><span class="kc">no-repeat</span><span class="p">;</span>
-   <span class="k">background-size</span><span class="p">:</span><span class="kc">contain</span><span class="p">,</span> <span class="kc">contain</span><span class="p">;</span>
-   <span class="k">background-position</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">top</span><span class="p">;</span>
-   <span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
-   <span class="k">cursor</span><span class="p">:</span><span class="kc">pointer</span> <span class="cp">!important</span><span class="p">;</span>
-   <span class="k">max-width</span><span class="p">:</span><span class="mi">130</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">BufTab</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
-   <span class="k">color</span><span class="p">:</span><span class="mh">#2e3330</span><span class="p">;</span>
-   <span class="k">background-color</span><span class="p">:</span> <span class="mh">#88b090</span><span class="p">;</span>
-   <span class="k">border-bottom-left-radius</span><span class="p">:</span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-   <span class="k">border-bottom-right-radius</span><span class="p">:</span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-  <span class="nt">BufTabAlternate</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
-   <span class="k">color</span><span class="p">:</span><span class="mh">#2e3330</span><span class="p">;</span>
-   <span class="k">background-color</span><span class="p">:</span> <span class="mh">#88b090</span><span class="p">;</span>
-   <span class="k">border-bottom-left-radius</span><span class="p">:</span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-   <span class="k">border-bottom-right-radius</span><span class="p">:</span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>你可以利用 <code>highlight</code> 命令来设置新样式，例如下面这条命令将当前标签页的文字设为红色:</p>
-<pre><code>:highlight -a BufTabSelected color:red
-</code></pre>
-<h2 id="屏幕截图">屏幕截图</h2>
-<p><img src="../images/buftabs.png" alt="main screenshot"></p>
-<h2 id="faq">FAQ</h2>
-<ol>
-<li>如何移除 firefox 标题栏？
-<ol>
-<li>
-<p>利用 js，强制移除</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-   <span class="kd">var</span> <span class="nx">win_ctrl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;window-controls&#34;</span><span class="p">);</span>
-   <span class="nx">win_ctrl</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&#34;fullscreencontrol&#34;</span><span class="p">,</span> <span class="s2">&#34;false&#34;</span><span class="p">);</span>
-   <span class="nx">win_ctrl</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&#34;hidden&#34;</span><span class="p">,</span> <span class="s2">&#34;false&#34;</span><span class="p">);</span>
-
-   <span class="kd">var</span> <span class="nx">mainWindow</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;main-window&#34;</span><span class="p">);</span>
-   <span class="nx">mainWindow</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&#34;hidechrome&#34;</span><span class="p">,</span> <span class="s2">&#34;true&#34;</span><span class="p">);</span>
-
-   <span class="nb">window</span><span class="p">.</span><span class="nx">maximize</span><span class="p">();</span>
-<span class="p">})();</span>
-</code></pre></div></li>
-<li>
-<p>利用系统自带窗口管理器</p>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="相关链接">相关链接</h2>
-<ol>
-<li><a href="https://github.com/amzyang/buftabs">项目地址</a></li>
-<li><a href="https://extensions.gnome.org/extension/354/maximus/">在 gnome-shell
-下当最大化时移除标题栏</a></li>
-</ol>
-
+    <h2 id="thymeleaf">thymeleaf</h2>
+<h3 id="idea-support">IDEA support</h3>
+<pre><code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+</code></pre><p><code>xmlns:th</code> is needed.</p>
+<h2 id="run">RUN</h2>
+<p>Click the run gutter icon at left side of main function.</p>
+<h2 id="debug">debug</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">java -Xdebug -Xrunjdwp:server<span class="o">=</span>y,transport<span class="o">=</span>dt_socket,address<span class="o">=</span>8000,suspend<span class="o">=</span>n -jar target/myproject-0.0.1-SNAPSHOT.jar
+</code></pre></div>
   </div>
 
   <div id=links>
     
+      <a class="basic-alignment left" href="https://amzyang.github.io/blog/sicp.html">&laquo; sicp</a>
     
-      <a class="basic-alignment left" href="https://amzyang.github.io/blog/pentadactyl.html">pentadactyl 使用心得 &raquo;</a>
     
   </div>
 </section>
